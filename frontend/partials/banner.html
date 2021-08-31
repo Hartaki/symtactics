@@ -1,0 +1,11 @@
+<header>
+  Symtactics Game #1 (3 players)
+</header>
+<div>
+  <div>
+    <div>Prize Pool: {{gameInstance.bank}} ETH</div>
+    <div>Pay Out: Each player gets {{gameInstance.prize}} ETH</div>
+    <div>Fees Collected: {{gameInstance.fees}} ETH</div>
+  </div>
+  <button ng-click="gameInstance.resolveGame()">Resolve Game</button>
+</div>

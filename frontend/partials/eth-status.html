@@ -1,0 +1,11 @@
+<h2>ETHEREUM</h2>
+<div class="account" ng-repeat="account in accounts">
+  <header>
+    {{account.id}}
+    <ul>
+      <li>{{account.address}}</li>
+      <li>{{account.value}} ETH</li>
+    </ul>
+  </header>
+  <button ng-click="account.buyIn(1)">Buy In</button>
+</div>
