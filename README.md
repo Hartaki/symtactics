@@ -1,49 +1,48 @@
-# symtacticsBlockchain
-Symtactics rough EVS implementation
+# Symtactics
+Symtactics Avalanche blockchain implementation
 
 ## All contracts are JS psuedocode ##
 
-SYMTACTICS
-
 Use AR to create a virtual and physical layer to the game
 
-Hexagonal Grids
-http://www.redblobgames.com/grids/hexagons/#line-drawing
 
+
+```
+// Hexagonal Grids - http://www.redblobgames.com/grids/hexagons/#line-drawing
 
 Hex
-  id:
-  zone:   [mainland, hong_kong, islands, ocean]
-  site:   Site
-  speed:  1 || 2 (water)
-  players:  [ ] || [player_id…]
+  id:     
+  zone:     Zone[] // [mainland, hong_kong, islands, ocean]
+  site:     Site
+  speed:    1 || 2 (water)
+  players:  [] || [player_id…]
+```
 
-
-
+```
 Site (extends Hex)
   hex_id:
-  name:     “The Jungle”
-  resources:  [resource, resource, resource]
-  wild:     [resource, resource]
-  enter_exit: true
+  name:         “The Jungle”
+  resources:    Resource[]
+  wild:         Resource[]
+  enter_exit:   true
   intervention: false
-  players:    [player01, player03]
+  players:      Player[]
+```
 
-
-
+```
 Player
   player_id:    “001”
-  resources:  [ {name: “oyster_dust”, count: 2}, {name: “trash_piles”, count: 1} ]
-  position:   hex_id
-  moves:    rollToMove || rollToMove + 3    //
-  turn:     true
-  canDraw:    true              //
-  canMove:    true              //
-  canAttack:  true              // in the same hex as another player
+  resources:    [ {name: “oyster_dust”, count: 2}, {name: “trash_piles”, count: 1} ]
+  position:     hex_id
+  moves:        rollToMove || rollToMove + 3    //
+  turn:         true
+  canDraw:      true //
+  canMove:      true //
+  canAttack:    true // in the same hex as another player
   canIntervene: true
-  canDrain:
+  canDrain:     true
   canUseDrone:  true
-  drone:    true
+  drone:        true
 
   draw:   draw
   rollToMove: rollToMove
@@ -77,12 +76,16 @@ Fight (attacker, defender) {
   var moves = roll;
   if (drone) {
     moves += 3
-  } 
+  }
+```
 
+```
 Drone
   player:   null || player_id
+  position: hex_id
+```
 
-
+```
 Weather
   heavy_rain:     .5
   weather_glitch:
@@ -94,7 +97,9 @@ function heatWave( sites ) {
       player.canMove = false;
     }
 }
+```
 
+```
 Resource
   type:     "Oyster Dust"
   count:    12
@@ -102,13 +107,17 @@ Resource
   in_play:    3
   invested:   2
   debt:   1
+```
 
+```
 Newspaper
 - Weather
 - Market
 - Event
-    -
+```
 
+```
 Resource
 - slick card scroll
 - use blockchain somehow
+```
