@@ -1,43 +1,23 @@
-# Build and Release Folders
-bin/
-bin-debug/
-bin-release/
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# Other files and folders
-.settings/
-.idea/
-.idea/workspace.xml
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
 .DS_Store
-.ipynb
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
-# should NOT be excluded as they contain compiler settings and other important
-# information for Eclipse / Flash Builder.
-
-# Mac OSX
-.DS_Store
-.AppleDouble
-.LSOverride
-tmp
-
-# Development (IDE)
-.idea
-.ipynb
-
-# Dependency Directory
-# https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
-node_modules
-bower_components
-app/jspm_packages
-
-# Compilations
-frontend/css/*.css
-frontend/css/*.css.map
-.sass-cache
-
-# logs
-logs/*
-*.log
 npm-debug.log*
-
-!.gitkeep
+yarn-debug.log*
+yarn-error.log*

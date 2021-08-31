@@ -1,123 +1,46 @@
-# Symtactics
-Symtactics Avalanche blockchain implementation
+# Getting Started with Create React App
 
-## All contracts are JS psuedocode ##
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Use AR to create a virtual and physical layer to the game
+## Available Scripts
 
+In the project directory, you can run:
 
+### `yarn start`
 
-```
-// Hexagonal Grids - http://www.redblobgames.com/grids/hexagons/#line-drawing
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Hex
-  id:     
-  zone:     Zone[] // [mainland, hong_kong, islands, ocean]
-  site:     Site
-  speed:    1 || 2 (water)
-  players:  [] || [player_id…]
-```
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-```
-Site (extends Hex)
-  hex_id:
-  name:         “The Jungle”
-  resources:    Resource[]
-  wild:         Resource[]
-  enter_exit:   true
-  intervention: false
-  players:      Player[]
-```
+### `yarn test`
 
-```
-Player
-  player_id:    “001”
-  resources:    [ {name: “oyster_dust”, count: 2}, {name: “trash_piles”, count: 1} ]
-  position:     hex_id
-  moves:        rollToMove || rollToMove + 3    //
-  turn:         true
-  canDraw:      true //
-  canMove:      true //
-  canAttack:    true // in the same hex as another player
-  canIntervene: true
-  canDrain:     true
-  canUseDrone:  true
-  drone:        true
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-  draw:   draw
-  rollToMove: rollToMove
-  rollToFight:  rollToFight
-  move:   movePlayer
+### `yarn build`
 
-Fight (attacker, defender) {
-  var attack  =   attacker.rollToFight( )
-  var defense   =   defender.rollToFight( )
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-  // player attacks player
-  if ( attack > defense ) {
-    defender.payPenalty( resources, attacker )
-    defender.move ( hong_kong_central )
-    return
-  }
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-  // drone attacks player
-  if (attacker.drone) {
-    var droneAttack   =   drone.rollToFight( )
-    var droneDefense  =   defender.rollToFight( )
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-    if ( attack > defense ) {
-      defender.payPenalty( resources, attacker )
-      defender.move ( hong_kong_central )
-      return
-    }
-  }
+### `yarn eject`
 
-  function movePlayer(roll) {
-  var moves = roll;
-  if (drone) {
-    moves += 3
-  }
-```
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-```
-Drone
-  player:   null || player_id
-  position: hex_id
-```
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-```
-Weather
-  heavy_rain:     .5
-  weather_glitch:
-  heat_wave:    heatWave()
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-function heatWave( sites ) {
-  sites.ForEach( function( site) {
-    site.players.forEach( function(player) {
-      player.canMove = false;
-    }
-}
-```
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-```
-Resource
-  type:     "Oyster Dust"
-  count:    12
-  reserve:    6
-  in_play:    3
-  invested:   2
-  debt:   1
-```
+## Learn More
 
-```
-Newspaper
-- Weather
-- Market
-- Event
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-```
-Resource
-- slick card scroll
-- use blockchain somehow
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
