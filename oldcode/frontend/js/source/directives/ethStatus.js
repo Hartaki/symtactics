@@ -1,6 +1,6 @@
-app.directive('ethStatus', function() {
+app.directive('ethStatus', function () {
   return {
-      restrict: 'E',
-      templateUrl: './partials/eth-status.html'
-  };
-});
+    restrict: 'E',
+    templateUrl: './partials/eth-status.html',
+  }
+})

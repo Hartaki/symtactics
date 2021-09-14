@@ -1,65 +1,64 @@
-<!doctype html>
+<!DOCTYPE html>
 <html ng-app="SymtacticsFrontend">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Symtactics Blockchain</title>
-  <!-- v0.0 -->
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>Symtactics Blockchain</title>
+    <!-- v0.0 -->
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-</head>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-<body ng-controller="AppController as app">
+  <body ng-controller="AppController as app">
+    <div id="ethereum" ng-controller="EthereumController as ethereum">
+      <eth-status></eth-status>
+    </div>
 
-<div id="ethereum" ng-controller="EthereumController as ethereum">
-  <eth-status></eth-status>
-</div>
+    <div id="game" ng-controller="GameController as game">
+      <!-- partials -->
+      <banner></banner>
+      <uneven-milestones></uneven-milestones>
+      <game-sites></game-sites>
+      <turn-track></turn-track>
+      <div id="mapArea">
+        <game-map></game-map>
+        <player-list></player-list>
+      </div>
+      <div id="cardArea">
+        <draw-pile></draw-pile>
+        <newspapers></newspapers>
+        <discard-pile></discard-pile>
+      </div>
+      <history-log></history-log>
+    </div>
 
-<div id="game" ng-controller="GameController as game">
-  <!-- partials -->
-  <banner></banner>
-  <uneven-milestones></uneven-milestones>
-  <game-sites></game-sites>
-  <turn-track></turn-track>
-  <div id="mapArea">
-    <game-map></game-map>
-    <player-list></player-list>
-  </div>
-  <div id="cardArea">
-    <draw-pile></draw-pile>
-    <newspapers></newspapers>
-    <discard-pile></discard-pile>
-  </div>
-  <history-log></history-log>
-</div>
+    <!-- angular -->
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-aria.min.js"></script>
+    <script src="js/angular-messages.min.js"></script>
+    <script src="js/angular-resource.min.js"></script>
+    <script src="js/angular-route.min.js"></script>
+    <script src="js/angular-sanitize.min.js"></script>
+    <script src="js/angular-touch.min.js"></script>
 
-<!-- angular -->
-<script src="js/angular.min.js"></script>
-<script src="js/angular-aria.min.js"></script>
-<script src="js/angular-messages.min.js"></script>
-<script src="js/angular-resource.min.js"></script>
-<script src="js/angular-route.min.js"></script>
-<script src="js/angular-sanitize.min.js"></script>
-<script src="js/angular-touch.min.js"></script>
+    <script src="js/source/app.js"></script>
+    <script src="js/source/controllers/AppController.js"></script>
+    <script src="js/source/controllers/GameController.js"></script>
+    <script src="js/source/controllers/EthereumController.js"></script>
 
-<script src="js/source/app.js"></script>
-<script src="js/source/controllers/AppController.js"></script>
-<script src="js/source/controllers/GameController.js"></script>
-<script src="js/source/controllers/EthereumController.js"></script>
-
-<script src="js/source/directives/ethStatus.js"></script>
-<script src="js/source/directives/unevenMilestones.js"></script>
-<script src="js/source/directives/gameSites.js"></script>
-<script src="js/source/directives/turnTrack.js"></script>
-<script src="js/source/directives/gameMap.js"></script>
-<script src="js/source/directives/playerList.js"></script>
-<script src="js/source/directives/newspapers.js"></script>
-<script src="js/source/directives/drawPile.js"></script>
-<script src="js/source/directives/discardPile.js"></script>
-<script src="js/source/directives/historyLog.js"></script>
-<script src="js/source/directives/banner.js"></script>
-</body>
+    <script src="js/source/directives/ethStatus.js"></script>
+    <script src="js/source/directives/unevenMilestones.js"></script>
+    <script src="js/source/directives/gameSites.js"></script>
+    <script src="js/source/directives/turnTrack.js"></script>
+    <script src="js/source/directives/gameMap.js"></script>
+    <script src="js/source/directives/playerList.js"></script>
+    <script src="js/source/directives/newspapers.js"></script>
+    <script src="js/source/directives/drawPile.js"></script>
+    <script src="js/source/directives/discardPile.js"></script>
+    <script src="js/source/directives/historyLog.js"></script>
+    <script src="js/source/directives/banner.js"></script>
+  </body>
 </html>

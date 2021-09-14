@@ -2,141 +2,136 @@ $padding: 5px;
 $margin: 10px;
 
 @mixin default() {
-    padding: $padding;
-    margin: $margin;
-    border: 1px solid #333;
-    flex-grow: 1;
+  padding: $padding;
+  margin: $margin;
+  border: 1px solid #333;
+  flex-grow: 1;
 }
 
 @mixin clean() {
-    margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
-@mixin flex-row($justify-content:space-between) {
-    display: flex;
-    flex-direction: row;
-    justify-content: $justify-content;
+@mixin flex-row($justify-content: space-between) {
+  display: flex;
+  flex-direction: row;
+  justify-content: $justify-content;
 }
 
 @mixin flex-column() {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
 @mixin invert() {
-    color: white;
-    background: black;
+  color: white;
+  background: black;
 }
 
 body {
-    @include flex-row();
-    background-color: #ddd;
-    font-family: sans-serif;
-    color: black;
+  @include flex-row();
+  background-color: #ddd;
+  font-family: sans-serif;
+  color: black;
 }
 
 /* ==========================================
    ETHEREUM
    ========================================== */
 #ethereum {
-    @include flex-column();
-    width: 350px;
-    padding: $padding; margin: $margin;
-    background-color: yellow;
+  @include flex-column();
+  width: 350px;
+  padding: $padding;
+  margin: $margin;
+  background-color: yellow;
 }
 
 eth-status {
 }
 
 .account {
-    @include flex-row(flex-end);
-    @include default();
-    margin-bottom: $margin;
-    header {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        ul {
-            font-size: 12px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+  @include flex-row(flex-end);
+  @include default();
+  margin-bottom: $margin;
+  header {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    ul {
+      font-size: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
-    button {
-        flex-basis: 80px;
-        font-size: 12px;
-        margin-left: $margin;
-    }
+  }
+  button {
+    flex-basis: 80px;
+    font-size: 12px;
+    margin-left: $margin;
+  }
 }
 
 /* ==========================================
    GAME
    ========================================== */
 #game {
-   padding: $padding; margin: $margin;
+  padding: $padding;
+  margin: $margin;
 }
 
 uneven-milestones {
-    @include flex-row();
+  @include flex-row();
 
-    div {
-        @include default();
-
-    }
+  div {
+    @include default();
+  }
 }
 
-
 game-sites {
-    @include flex-row();
+  @include flex-row();
 
-    div {
-        @include default();
-
-    }
+  div {
+    @include default();
+  }
 }
 
 turn-track {
-    @include flex-row();
+  @include flex-row();
 
-    div {
-        @include default();
-
-    }
+  div {
+    @include default();
+  }
 }
 
 #mapArea {
-    @include flex-row();
-    @include default();
-    background-color:white;
+  @include flex-row();
+  @include default();
+  background-color: white;
 
-    game-map {
-        @include default();
+  game-map {
+    @include default();
+  }
+
+  player-list {
+    div {
+      @include default();
     }
-    
-    player-list {
-        div {
-            @include default();
-        }
-    }
+  }
 }
 
 #cardArea {
+  @include default();
+  @include flex-row();
+
+  draw-pile {
     @include default();
-    @include flex-row();
+  }
+  newspapers {
+    @include default();
+    @include invert();
+  }
 
-    draw-pile {
-        @include default();
-    }
-    newspapers {
-        @include default();
-        @include invert();
-    }
-    
-    discard-pile {
-        @include default();
-
-    }
-
-    
+  discard-pile {
+    @include default();
+  }
 }
-

@@ -1,6 +1,6 @@
-app.directive('playerList', function() {
-    return {
-        restrict: 'E',
-        templateUrl: './partials/player-list.html',
-    };
-});
+app.directive('playerList', function () {
+  return {
+    restrict: 'E',
+    templateUrl: './partials/player-list.html',
+  }
+})
