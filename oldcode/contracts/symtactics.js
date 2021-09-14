@@ -259,7 +259,7 @@ function roll() {
 function playGame() {
 
 	shuffleNewspapers(SYMTACTICS.newspapers);
-	// announceGameStart();
+	// announceGameStart(); // EMIT EVENT
 
 	announceRound(1);
 	playRound();
