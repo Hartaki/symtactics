@@ -71,8 +71,17 @@ function market(market: Market) {
       marketReport += 'ARE WILD.'
       break
   }
-  console.log(`%c                MARKETS		${marketReport}`, style)
+  console.log(`%c                MARKETS		${market.id}`, style)
+  console.log(`%c${IN}${marketReport}`, style)
   console.log(`%c${IN}`, style)
+}
+
+function playersAffectedByEvent(players: Player[], event: Event) {
+  players.forEach((player: Player) => {
+    console.log(`${IN}${player.name} is affected by ${event.id}`)
+    // TODO: handle community workshops
+    console.log(`${IN}		pay item || pay 2 resources & move to HKC`)
+  })
 }
 
 function gameEnd(winner: Player | undefined) {
@@ -105,4 +114,15 @@ function gameEnd(winner: Player | undefined) {
 //   })
 // }
 
-export let announce = { gameStart, gameState, roll, round, newspaper, weather, market, event, gameEnd }
+export let announce = {
+  gameStart,
+  gameState,
+  roll,
+  round,
+  newspaper,
+  weather,
+  market,
+  event,
+  gameEnd,
+  playersAffectedByEvent,
+}

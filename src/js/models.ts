@@ -16,6 +16,6 @@ export interface ISymtactics {
   newspapers: Newspaper[]
 
   todaysPaper: Newspaper | undefined
-  rounds: 10
+  rounds: number
   winCondition: 'Whoever has the drone at the end of the game wins.'
 }
