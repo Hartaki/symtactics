@@ -4,12 +4,15 @@ import { items } from './js/Item'
 import { players } from './js/Player'
 import { resources } from './js/Resource'
 import { siteMap } from './js/Site'
-import { newspapers } from './js/Newspaper'
+import { Newspaper, newspapers } from './js/Newspaper'
 import { hexes } from './js/Hex'
 import { announce } from './utils/Announcement'
 import { ISymtactics } from './js/models'
+import { shuffle } from './utils/helper'
+import { declareWinner } from './utils/Engine'
 
 function App() {
+  // init game
   let SYMTACTICS: ISymtactics = {
     areaMap,
     items,
@@ -19,30 +22,33 @@ function App() {
     hexes,
     newspapers,
 
-    todaysPaper: null,
+    todaysPaper: undefined,
     rounds: 10,
     winCondition: 'Whoever has the drone at the end of the game wins.',
   }
 
+  let simulation = true
+
   // game methods
   function playGame(SYMTACTICS: ISymtactics) {
-    console.log(SYMTACTICS)
-    // shuffleNewspapers(SYMTACTICS.newspapers)
-    // announce.gameStart(); // EMIT EVENT
+    shuffle(SYMTACTICS.newspapers)
+    announce.gameStart(SYMTACTICS) // EMIT EVENT
 
-    announce.round(1) // EMIT EVENT
-    playRound()
-    // for (i = 1; i < SYMTACTICS.rounds + 1; i++) {
-    // 	announce.round(i);
-    // 	playRound();
-    // }
-
-    // announce.gameEnd();
+    // SIMULATE
+    if (simulation) {
+      for (let i = 1; i < SYMTACTICS.rounds + 1; i++) {
+        announce.gameState(SYMTACTICS)
+        announce.round(i) // EMIT EVENT
+        playRound()
+      }
+      announce.gameEnd(declareWinner(SYMTACTICS.players))
+    }
   }
 
   function playRound() {
-    // setNewspaper(SYMTACTICS.newspapers)
-    // announce.newspaper(SYMTACTICS.todaysPaper)
+    setNewspaper(SYMTACTICS.newspapers)
+    announce.newspaper(SYMTACTICS.todaysPaper)
+
     // setAffectedZone(SYMTACTICS.todaysPaper.event)
     // checkPlayersAffectedByEvent(SYMTACTICS.todaysPaper.event, SYMTACTICS.hexes)
     // announce.PlayerLocations(SYMTACTICS.hexes)
@@ -63,24 +69,13 @@ function App() {
   //     })
   //   }
 
-  //   function declareWinner(players) {
-  //     var winner
-  //     players.forEach(function (player) {
-  //       if (player.drone) {
-  //         winner = player
-  //       }
-  //     })
-  //     return winner
-  //   }
-
   //   function shuffleNewspapers(newspapers: Newspaper[]) {
   //     shuffle(newspapers)
   //   }
 
-  //   function setNewspaper(newspapers: Newspaper[]) {
-  //     SYMTACTICS.todaysPaper = newspapers.pop()
-  //     // console.log(IN,SYMTACTICS.todaysPaper);
-  //   }
+  function setNewspaper(newspapers: Newspaper[]) {
+    SYMTACTICS.todaysPaper = newspapers.pop()
+  }
 
   //   function checkPlayersAffectedByEvent(event: Event, hexes: Hex[]) {
   // for (let hex of hexes) {

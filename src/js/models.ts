@@ -15,7 +15,7 @@ export interface ISymtactics {
   hexes: Hex[]
   newspapers: Newspaper[]
 
-  todaysPaper: null
+  todaysPaper: Newspaper | undefined
   rounds: 10
   winCondition: 'Whoever has the drone at the end of the game wins.'
 }
