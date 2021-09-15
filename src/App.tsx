@@ -31,6 +31,7 @@ function App() {
 
   function playGame(SYMTACTICS: ISymtactics) {
     shuffle(SYMTACTICS.newspapers)
+    shuffle(SYMTACTICS.resources)
     announce.gameStart(SYMTACTICS)
 
     // SIMULATE
@@ -51,25 +52,22 @@ function App() {
       // HANDLE EVENT/AFFECTED AREA
       setAffectedArea(SYMTACTICS.areaMap, SYMTACTICS.todaysPaper!.event)
       handlePlayersAffectedByEvent(SYMTACTICS.todaysPaper!.event, SYMTACTICS.players)
-      //   announce.PlayerLocations(SYMTACTICS.hexes)
+      //   announce.PlayerLocations(SYMTACTICS.players)
+      // simulatePlayers(SYMTACTICS.players);
     }
-
-    // simulatePlayers(SYMTACTICS.players);
   }
 
-  //   function simulatePlayers(players) {
-  //     players.forEach(function (player) {
-  //       player.roll()
-  //     })
-  //   }
+  /*
 
-  //   function resetDrone(players) {
-  //     players.forEach(function (player) {
-  //       if (player.drone === true) {
-  //         player.drone = false
-  //       }
-  //     })
-  //   }
+  function simulatePlayers(players) {
+    players.forEach(function (player) {        
+        player.draw()
+        player.roll()
+        // announceRoll(this, myRoll)
+        // player does shit
+    })
+  }
+   */
 
   function setNewspaper(newspapers: Newspaper[]) {
     SYMTACTICS.todaysPaper = newspapers.pop()
