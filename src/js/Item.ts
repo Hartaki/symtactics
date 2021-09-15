@@ -1,6 +1,6 @@
 import { Area, areaMap } from './Area'
 
-class Item {
+export class Item {
   name: string
   zone: Area
   label: string
@@ -25,7 +25,7 @@ let augmentedFoam = new Item('Augmented Foam', areaMap.hongKong)
 let minecraftPortscan = new Item('Minecraft Portscan', areaMap.hongKong)
 let ancientAndroidWear = new Item('Ancient AndroidWear', areaMap.hongKong)
 
-export let items = [
+export let items: Item[] = [
   spamFromYourInvestor,
   liamsPortal,
   gundamBaroque,

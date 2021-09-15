@@ -1,3 +1,7 @@
+export interface IResource {
+  [key: string]: Resource
+}
+
 export class Resource {
   name: string
   wild: boolean
@@ -17,8 +21,17 @@ let information = new Resource('Information')
 let uploads = new Resource('Uploads')
 let trashPiles = new Resource('Trash Piles')
 
-export let resourceMap = { insectSpecies, bitcoin, antibodies, bamboo, oysterDust, information, uploads, trashPiles }
-export let resources = [
+export let resourceMap: IResource = {
+  insectSpecies,
+  bitcoin,
+  antibodies,
+  bamboo,
+  oysterDust,
+  information,
+  uploads,
+  trashPiles,
+}
+export let resources: Resource[] = [
   insectSpecies,
   bitcoin,
   antibodies,

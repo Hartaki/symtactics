@@ -18,4 +18,4 @@ let hex001 = new Hex('001', areaMap.mainland, siteMap.oysterFarm)
 let hex002 = new Hex('002', areaMap.islands, null)
 let hex003 = new Hex('003', areaMap.ocean, siteMap.trashVortex)
 
-export let hexes = [hex000, hex001, hex002, hex003]
+export let hexes: Hex[] = [hex000, hex001, hex002, hex003]

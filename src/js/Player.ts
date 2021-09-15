@@ -1,6 +1,6 @@
 import { hexes, Hex } from './Hex'
 import { roll } from '../utils/helper'
-class Player {
+export class Player {
   id: string
   name: string
   hand: any[]
@@ -24,4 +24,4 @@ let p3 = new Player('p3', 'Malia Obama', hexes[1])
 let p4 = new Player('p4', 'Young Thug', hexes[2])
 let p5 = new Player('p5', 'The Mooch', hexes[3])
 
-export let players = [p1, p2, p3, p4, p5]
+export let players: Player[] = [p1, p2, p3, p4, p5]

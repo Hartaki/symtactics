@@ -1,5 +1,8 @@
 import { resourceMap, Resource } from './Resource'
 
+export interface ISite {
+  [key: string]: Site
+}
 export class Site {
   name: string
   designated_resources: Resource[]
@@ -42,7 +45,7 @@ let trashVortex = new Site(
   ]
 )
 
-export let siteMap = {
+export let siteMap: ISite = {
   hongKongCentral,
   oysterFarm,
   trashVortex,

@@ -1,5 +1,8 @@
 import { areaMap, Area } from './Area'
 
+export interface IEvent {
+  [key: string]: Event
+}
 export class Event {
   id: string
   description: string
@@ -33,7 +36,7 @@ let event14 = new Event("Fisherman's STD", 'Officials blame hookers', areaMap.oc
 let event15 = new Event('Driverless Traffic Jam', 'Hong Kong?  More like HONK Kong!', areaMap.mainland)
 let event16 = new Event('Flood!', 'Water they thinking after the flood?', areaMap.mainland)
 
-export let eventMap = {
+export let eventMap: IEvent = {
   event01,
   event02,
   event03,

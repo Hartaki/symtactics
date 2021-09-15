@@ -1,5 +1,9 @@
 import { resourceMap, Resource } from './Resource'
 
+export interface IMarket {
+  [key: string]: Market
+}
+
 export class Market {
   id: string
   wilds: Resource[]
@@ -15,4 +19,4 @@ let pandemic = new Market('Pandemic', [resourceMap.antibodies])
 let bioTech = new Market('Bio Tech', [resourceMap.bamboo, resourceMap.insectSpecies])
 let techBubble = new Market('Tech Bubble', [resourceMap.bitcoin, resourceMap.information, resourceMap.uploads])
 
-export let marketMap = { bullMarket, normal, pandemic, bioTech, techBubble }
+export let marketMap: IMarket = { bullMarket, normal, pandemic, bioTech, techBubble }
