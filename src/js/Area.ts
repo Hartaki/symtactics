@@ -4,12 +4,12 @@ export interface IArea {
 export class Area {
   name: string
   speed: number
-  under_event?: boolean
+  affected: boolean
 
   constructor(name: string, speed: number) {
     this.name = name
     this.speed = speed
-    this.under_event = false
+    this.affected = false
   }
 }
 

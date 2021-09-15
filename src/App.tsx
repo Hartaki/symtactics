@@ -9,7 +9,7 @@ import { hexes } from './js/Hex'
 import { announce } from './utils/Announcement'
 import { ISymtactics } from './js/models'
 import { shuffle } from './utils/helper'
-import { declareWinner } from './utils/Engine'
+import { declareWinner, setAffectedArea } from './utils/Engine'
 
 function App() {
   // init game
@@ -49,9 +49,11 @@ function App() {
     setNewspaper(SYMTACTICS.newspapers)
     announce.newspaper(SYMTACTICS.todaysPaper)
 
-    // setAffectedZone(SYMTACTICS.todaysPaper.event)
-    // checkPlayersAffectedByEvent(SYMTACTICS.todaysPaper.event, SYMTACTICS.hexes)
-    // announce.PlayerLocations(SYMTACTICS.hexes)
+    if (SYMTACTICS.todaysPaper) {
+      setAffectedArea(SYMTACTICS.areaMap, SYMTACTICS.todaysPaper!.event)
+      // checkPlayersAffectedByEvent(SYMTACTICS.todaysPaper.event, SYMTACTICS.hexes)
+      // announce.PlayerLocations(SYMTACTICS.hexes)
+    }
     // simulatePlayers(SYMTACTICS.players);
   }
 
@@ -92,14 +94,6 @@ function App() {
   //   }
 
   //   function movePlayersAffectedByEvent(player) {}
-
-  //   function setAffectedZone(event) {
-  //     for (zone of SYMTACTICS.zones) {
-  //       if (event.zone === zone) zone.under_event = true
-  //       else zone.under_event = false
-  //     }
-  //     // console.log(IN, event.zone)
-  //   }
 
   playGame(SYMTACTICS)
 

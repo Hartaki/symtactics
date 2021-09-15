@@ -1,4 +1,12 @@
 import { Player } from '../js/Player'
+import { Event } from '../js/Event'
+import { IArea } from '../js/Area'
+
+function setAffectedArea(areaMap: IArea, event: Event) {
+  for (let area in areaMap) {
+    areaMap[area].affected = event.areaAffected.name === areaMap[area].name ? true : false
+  }
+}
 
 function declareWinner(players: Player[]) {
   let winner
@@ -10,4 +18,4 @@ function declareWinner(players: Player[]) {
   return winner
 }
 
-export { declareWinner }
+export { setAffectedArea, declareWinner }

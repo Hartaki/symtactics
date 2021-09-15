@@ -19,7 +19,7 @@ function gameStart(SYMTACTICS: ISymtactics) {
 }
 
 function gameState(SYMTACTICS: ISymtactics) {
-  console.log(`STATE                    `, SYMTACTICS)
+  console.log(`                  STATE  `, SYMTACTICS)
 }
 
 function roll(player: Player, roll: number) {
@@ -27,14 +27,15 @@ function roll(player: Player, roll: number) {
 }
 
 function event(event: Event) {
-  console.log(`%cEVENT						${event.id}!  ${event.description}`, style)
-  console.log(`%cAREA AFFECTED				${event.areaAffected.name}`, style)
+  console.log(`%c                  EVENT 	${event.id}!  ${event.description}`, style)
+  console.log(`%c							${event.areaAffected.name}`, style)
+  console.log(`%c${IN}`, style)
 }
 
 function round(round: number) {
   console.log(BREAK)
   console.log(`%cROUND ${round}`, style)
-  console.log(`%c${IN}-`, style)
+  console.log(`%c${IN}`, style)
 }
 
 function newspaper(newspaper: Newspaper | undefined) {
@@ -45,9 +46,9 @@ function newspaper(newspaper: Newspaper | undefined) {
 }
 
 function weather(weather: Weather) {
-  console.log(`%cTHE WEATHER FORECAST IS 	${weather.name}`, style)
+  console.log(`%c                WEATHER 	${weather.name}`, style)
   console.log(`%c							${weather.description}`, style)
-  console.log(`%c${IN}-`, style)
+  console.log(`%c${IN}`, style)
 }
 
 function market(market: Market) {
@@ -70,8 +71,8 @@ function market(market: Market) {
       marketReport += 'ARE WILD.'
       break
   }
-  console.log(`%cTHE MARKETS HAVE OPENED		${marketReport}`, style)
-  console.log(`%c${IN}-`, style)
+  console.log(`%c                MARKETS		${marketReport}`, style)
+  console.log(`%c${IN}`, style)
 }
 
 function gameEnd(winner: Player | undefined) {
