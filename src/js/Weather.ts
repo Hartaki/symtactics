@@ -1,4 +1,4 @@
-class Weather {
+export class Weather {
   name: string
   description: string
   effect?: any
@@ -20,4 +20,4 @@ let pollutedWind = new Weather('Polluted Wind', 'All players must pay 2 resource
   resources: 2,
 })
 
-export default { weatherGlitch, heavyRain, clear, heatWave, pollutedWind }
+export let weatherMap = { weatherGlitch, heavyRain, clear, heatWave, pollutedWind }
