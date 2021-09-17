@@ -32,33 +32,43 @@ Events, which happen at the beginning of every round, force the players to conti
 ### 1. PREPARE ELEMENTS
 
 -   1 six-sided die
--   `ASUS Drone` token (1)
--   `Player` token (2-6)
--   `Vietnamese Refugees` token (1)
--   `Time Track Counter` token (1)
--   Shuffled deck of `Assets` (56 `Resources` + 12 `Items`) 
+-   `ASUS Drone` (1)
+-   `Player` (2-6)
+-   `Vietnamese Refugees` (1)
+-   `Time Track Counter` (1)
+-   Shuffled deck of `Resources` + `Items`, as `Assets` (68)
 -   Shuffled deck of `Mini-Newspapers` (16)
 
 ### 2. SET UP THE BOARD
 
+- Roll die to choose the `Starting Player`
 - Deal 3 `Assets` to every `Player`
-- Place remaining `Assets` (face down) onto `Draw Pile`
-- `Players` roll die to choose the `Starting Player`
 - Place elements onto the board:
-  - `ASUS Drone`
-  - `Vietnamese Refugees`
-  - `Time Track Counter` on `Game Start`
+  - `ASUS Drone` on its hex
+  - `Vietnamese Refugees` on its hex
+  - `Players` on `Central` hex
   - `Mini-Newspapers` (face up) on `Hong Kong News`
-  - `Players` (all) on `Central` hex in `Area: Hong Kong` 
+  - `Time Track Counter` on `Game Start`
+  -  Remaining `Assets` (face down) on `Draw Pile`
+ 
+### 3. START GAME
 
-### 3. START THE GAME
+Begin with `Starting Player`. Each `Player` takes 1 turn per `Round`. Move in a clockwise fashion. During their turn, a `Player` may perform any and all of the following actions once, in any order:
 
-Begin with the `Starting Player`. Each `Player` takes 1 turn per `Round`. Move in a clockwise fashion. During their turn, a `Player` may perform any and all of the following actions once, in any order:
-
--   `DRAW` - Draw 1 `Asset` (if available) from `Draw Pile`.
--   `TRAVEL` - Roll die. Look at the `Mini-Newspaper `Weather Forecast` and Travel up to the amount of the roll. If you enter a water hex, you must discard 1 Resource to continue.
--   `FIGHT` - You may attack any player in the same hex as you. Roll die to Fight. If attacker's roll is greater than defender's roll, defending player must give 2 cards to the attacker and immediately return their token to Central hex to regroup. If attacker's roll is less than or equal to defender's roll, nothing happens.
--   `TRADE` - Players can Trade cards at any time. Trades are nego­tiable, so you might trade 1-for-1, 2-for-1, etc.
+-   `DRAW` - Draw 1 `Asset` (if available)
+-   `TRAVEL` 
+        - The `Weather Forecast` in the `Mini-Newspaper` determines how `Players` may travel during the round.
+        - Roll die. 
+        - Travel up to the amount of the roll according to the `Weather Forecast`
+        - The first time you enter an `Ocean` hex from a land hex, you must discard 1 `Asset` to continue travelling.
+-   `FIGHT` - You may attack any `Player` in the same hex as you. 
+        -   `Attacking Player` rolls die. 
+        -   `Defending `Player` rolls die. 
+        -   If `Attacking Player` roll > `Defending Player` roll:
+            -   `Defending Player` gives 2 `Assets` to the `Attacking Player`
+            -   `Defending Player` moves to `Central` hex 
+        -   Else nothing happens 
+-   `TRADE` - `Players` can Trade `Assets` with other `Players` at any time. Trades are negotiable: 1-for-1 or 2-for-1, etc.
 -   `INTERVENE` - When you reach a site hex, you may stop there to perform an Intervention. Look at the Market to see what Resources are 'wild' and can stand for any other Resource for the duration of the round. Pay the 3 Resources from your hand that match the site's 3 icons and place them face-up on the bottom of the game board where noted. Draw 6 cards from the Draw Pile. You may also take a few moments to explain your Intervention to the other players and how it utilizes the required Resources to create a better urban condition at your site. If at least two of the other players agree that your description is compelling, you may Draw another card. You may not Travel further upon complet­ing an Intervention.
 -   `DRAIN / DEVELOP` - If you're at a site with an Intervention, you can Drain it by taking the Resources from the bottom of the board. Further, you could Develop the site by reinvesting the drained Resources to draw 6 new cards from the Draw Pile.
 
