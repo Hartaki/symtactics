@@ -15,49 +15,60 @@ In 2047, Hong Kong is in the midst of ever-growing inequality. Players Travel, F
 
 Events, which happen at the beginning of every round, force the players to continually shift their tactical decisions and strate­gic objectives. There are three outcomes to the game:
 
-### COLLECTIVE WIN
+### COLLECTIVE WIN: All Players win
+- `Interventions` are complete
+- before Time Track reaches The End 
 
-When all 8 Interventions are completed before the Time Track reaches The End, all players win together.
+### INDIVIDUAL WIN: 1 Player with the most Resources wins
+- `Uneven Growth Milestones` have accumulated
+- Current Round < The End 
 
-### INDIVIDUAL WIN
-
-When all 8 Uneven Growth Milestones have been reached before the Time Track reaches The End, the player with the most Resources in their hand wins.
-
-### UNIVERSAL DEFEAT
-
-When 10 rounds pass and the Time Track reaches The End before all inter­ventions are completed or uneven growth milestones have been reached, all players lose.
+### UNIVERSAL DEFEAT: All Players lose
+- Time Track reaches The End 
+- Before all `Interventions` or `Uneven Growth milestones` are completed.
 
 ## SETUP
 
-### 1. PREPARE GAMING ELEMENTS
+### 1. PREPARE ELEMENTS
 
 -   1 six-sided die
--   1 small token for ASUS Drone, such as a piece of lint
--   1 small token per player, such as a coin
--   1 small token for Vietnamese Refugees, such as a bottle cap
--   1 grain of rice for Time Track Counter
--   56 Resources + 12 Items
--   16 Mini-Newspapers
+-   `ASUS Drone` (1)
+-   `Player` (2-6)
+-   `Vietnamese Refugees` (1)
+-   `Time Track Counter` (1)
+-   Shuffled deck of `Resources` + `Items`, as `Assets` (68)
+-   Shuffled deck of `Mini-Newspapers` (16)
 
 ### 2. SET UP THE BOARD
 
-Deal 3 cards to every player
-Players roll die to choose the starting player
-Place ASUS Drone
-All player tokens start from Central hex in Hong Kong
-Place Vietnamese Refugees
-Place remaining stack of cards, face down, onto Draw Pile area
-Place Counter onto Game Start along the Time Track
-Place Mini-Newspapers face up onto area labeled 'Hong Kong News'
+- Roll die to choose the `Starting Player`
+- Deal 3 `Assets` to every `Player`
+- Place elements onto the board:
+  - `ASUS Drone` on its hex
+  - `Vietnamese Refugees` on its hex
+  - `Players` on `Central` hex
+  - `Mini-Newspapers` (face up) on `Hong Kong News`
+  - `Time Track Counter` on `Game Start`
+  -  Remaining `Assets` (face down) on `Draw Pile`
+ 
+### 3. START GAME
 
-### 3. NOW START THE GAME
+Begin with `Starting Player`. Each `Player` takes 1 turn per `Round`. Move in a clockwise fashion. During their turn, a `Player` may perform any and all of the following actions once, in any order:
 
-Moving in a clockwise fashion, players each take 1 turn per round, beginning with the Starting Player. During her turn, a player may perform all of the below actions once, in any order:
-
--   `DRAW` - Draw 1 card, if available from Draw Pile.
--   `TRAVEL` - Roll die. Look at the Weather Forecast and Travel up to the amount of the roll. If you enter a water hex, you must discard 1 Resource to continue.
--   `FIGHT` - You may attack any player in the same hex as you. Roll die to Fight. If attacker's roll is greater than defender's roll, defending player must give 2 cards to the attacker and immediately return their token to Central hex to regroup. If attacker's roll is less than or equal to defender's roll, nothing happens.
--   `TRADE` - Players can Trade cards at any time. Trades are nego­tiable, so you might trade 1-for-1, 2-for-1, etc.
+-   `DRAW` - Draw 1 `Asset` (if available)
+-   `TRAVEL` 
+        - The `Weather Forecast` in the `Mini-Newspaper` determines how `Players` may travel during the round.
+        - Roll die. 
+        - Travel up to the amount of the roll according to the `Weather Forecast`
+        - The first time you enter an `Ocean` hex from a land hex, you must discard 1 `Asset` to continue travelling.
+-   `FIGHT` - You may attack any `Player` in the same hex as you. 
+        -   `Attacking Player` rolls die. 
+        -   `Defending `Player` rolls die. 
+        -   If `Attacking Player` roll > `Defending Player` roll:
+            -   `Defending Player` gives 2 `Assets` to the `Attacking Player`
+            -   `Defending Player` moves to `Central` hex 
+        -   Else nothing happens 
+-   `TRADE` - `Players` can Trade `Assets` with other `Players` at any time. Trades are negotiable: 1-for-1 or 2-for-1, etc.
 -   `INTERVENE` - When you reach a site hex, you may stop there to perform an Intervention. Look at the Market to see what Resources are 'wild' and can stand for any other Resource for the duration of the round. Pay the 3 Resources from your hand that match the site's 3 icons and place them face-up on the bottom of the game board where noted. Draw 6 cards from the Draw Pile. You may also take a few moments to explain your Intervention to the other players and how it utilizes the required Resources to create a better urban condition at your site. If at least two of the other players agree that your description is compelling, you may Draw another card. You may not Travel further upon complet­ing an Intervention.
 -   `DRAIN / DEVELOP` - If you're at a site with an Intervention, you can Drain it by taking the Resources from the bottom of the board. Further, you could Develop the site by reinvesting the drained Resources to draw 6 new cards from the Draw Pile.
 
