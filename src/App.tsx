@@ -21,7 +21,6 @@ function App() {
     siteMap,
     hexes,
     newspapers,
-
     todaysPaper: undefined,
     rounds: 10,
     winCondition: 'Whoever has the drone at the end of the game wins.',
@@ -37,7 +36,7 @@ function App() {
     // SIMULATE
     if (simulation) {
       for (let i = 1; i < SYMTACTICS.rounds + 1; i++) {
-        announce.gameState(SYMTACTICS)
+        announce.state(SYMTACTICS)
         announce.round(i)
         playRound()
       }
