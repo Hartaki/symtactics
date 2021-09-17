@@ -15,17 +15,17 @@ In 2047, Hong Kong is in the midst of ever-growing inequality. Players Travel, F
 
 Events, which happen at the beginning of every round, force the players to continually shift their tactical decisions and strate­gic objectives. There are three outcomes to the game:
 
-### COLLECTIVE WIN
+### COLLECTIVE WIN: All Players win
+- `Interventions` are complete
+- before Time Track reaches The End 
 
-When all 8 Interventions are completed before the Time Track reaches The End, all players win together.
+### INDIVIDUAL WIN: 1 Player with the most Resources wins
+- `Uneven Growth Milestones` have accumulated
+- Current Round < The End 
 
-### INDIVIDUAL WIN
-
-When all 8 Uneven Growth Milestones have been reached before the Time Track reaches The End, the player with the most Resources in their hand wins.
-
-### UNIVERSAL DEFEAT
-
-When 10 rounds pass and the Time Track reaches The End before all inter­ventions are completed or uneven growth milestones have been reached, all players lose.
+### UNIVERSAL DEFEAT: All Players lose
+- Time Track reaches The End 
+- Before all `Interventions` or `Uneven Growth milestones` are completed.
 
 ## SETUP
 
