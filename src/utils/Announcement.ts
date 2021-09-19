@@ -28,8 +28,8 @@ function state(SYMTACTICS: ISymtactics) {
   console.log(`                  STATE  `, SYMTACTICS)
 }
 
-function roll(player: Player, roll: number) {
-  console.log('ANNOUNCEMENT -', player.name, '(' + player.id + ') rolled a', roll + '.')
+function roll(player: Player, value: number) {
+  console.log('ANNOUNCEMENT -', player.name, '(' + player.id + ') rolled a', value + '.')
 }
 
 function event(event: Event) {
@@ -105,20 +105,11 @@ function gameEnd(winner: Player | undefined) {
 //   })
 // }
 
-// function playerLocations(hexes) {
-//   // check each hex for a player
-//   hexes.forEach(function (hex) {
-//     if (hex.players.length > 0 && hex.site) {
-//       hex.players.forEach(function (player) {
-//         console.log(`${IN}${player.name} (${player.id}) is in		${hex.zone.name}	at		${hex.site.name}`)
-//       })
-//     } else if (hex.players.length) {
-//       hex.players.forEach(function (player) {
-//         console.log('ANNOUNCEMENT -', player.name, '(' + player.id + ') is in', hex.zone.name + '.')
-//       })
-//     }
-//   })
-// }
+function playerLocations(players: Player[]) {
+  players.forEach((player: Player) => {
+    console.log(`${IN}${player.name} (${player.id}) is in		${player.hex.area.name}	at		${player.hex}`)
+  })
+}
 
 export let announce = {
   gameStart,
@@ -131,4 +122,5 @@ export let announce = {
   event,
   gameEnd,
   playersAffectedByEvent,
+  playerLocations,
 }

@@ -33,6 +33,18 @@ function getPlayersAffectedByEvent(event: Event, players: Player[]): Player[] {
 //   function movePlayersAffectedByEvent(player) {}
 
 /* ==========================================
+    ROLL
+   ========================================== */
+
+function handleRoll(value: number) {
+  // reassign drone
+  // if (myRoll === 6) {
+  //   resetDrone(SYMTACTICS.players)
+  //   this.drone = true
+  //   announceDroneReassignment(SYMTACTICS.players)
+  // }
+}
+/* ==========================================
     DRONE
    ========================================== */
 
@@ -58,4 +70,4 @@ function declareWinner(players: Player[]) {
   return winner
 }
 
-export { setAffectedArea, declareWinner, handlePlayersAffectedByEvent }
+export { setAffectedArea, declareWinner, handlePlayersAffectedByEvent, handleRoll }

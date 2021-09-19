@@ -20,8 +20,8 @@ export class Player {
 
 let p1 = new Player('p1', 'Taylor Swift', hexes[0])
 let p2 = new Player('p2', 'Rem Koolhaas', hexes[0])
-let p3 = new Player('p3', 'Malia Obama', hexes[1])
-let p4 = new Player('p4', 'Young Thug', hexes[2])
-let p5 = new Player('p5', 'The Mooch', hexes[3])
+let p3 = new Player('p3', 'Malia Obama ', hexes[1])
+let p4 = new Player('p4', 'Young Thug  ', hexes[2])
+let p5 = new Player('p5', 'The Mooch   ', hexes[3])
 
 export let players: Player[] = [p1, p2, p3, p4, p5]

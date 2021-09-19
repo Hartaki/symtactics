@@ -1,7 +1,7 @@
 import './App.css'
 import { areaMap } from './js/Area'
 import { items } from './js/Item'
-import { players } from './js/Player'
+import { Player, players } from './js/Player'
 import { resources } from './js/Resource'
 import { siteMap } from './js/Site'
 import { Newspaper, newspapers } from './js/Newspaper'
@@ -9,7 +9,7 @@ import { hexes } from './js/Hex'
 import { announce } from './utils/Announcement'
 import { ISymtactics } from './js/models'
 import { shuffle } from './utils/helper'
-import { declareWinner, setAffectedArea, handlePlayersAffectedByEvent } from './engine/Engine'
+import { declareWinner, setAffectedArea, handlePlayersAffectedByEvent, handleRoll } from './engine/Engine'
 
 function App() {
   // init game
@@ -51,22 +51,21 @@ function App() {
       // HANDLE EVENT/AFFECTED AREA
       setAffectedArea(SYMTACTICS.areaMap, SYMTACTICS.todaysPaper!.event)
       handlePlayersAffectedByEvent(SYMTACTICS.todaysPaper!.event, SYMTACTICS.players)
-      //   announce.PlayerLocations(SYMTACTICS.players)
-      // simulatePlayers(SYMTACTICS.players);
+      announce.playerLocations(SYMTACTICS.players)
+      simulatePlayers(SYMTACTICS.players)
     }
   }
 
-  /*
+  function simulatePlayers(players: Player[]) {
+    players.forEach((player: Player) => {
+      // player.draw()
+      let roll = player.roll()
+      announce.roll(player, roll)
+      handleRoll(roll)
 
-  function simulatePlayers(players) {
-    players.forEach(function (player) {        
-        player.draw()
-        player.roll()
-        // announceRoll(this, myRoll)
-        // player does shit
+      // player does shit
     })
   }
-   */
 
   function setNewspaper(newspapers: Newspaper[]) {
     SYMTACTICS.todaysPaper = newspapers.pop()

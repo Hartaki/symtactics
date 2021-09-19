@@ -3,16 +3,7 @@ import { Newspaper } from '../js/Newspaper'
 import { Resource } from '../js/Resource'
 
 function roll() {
-  // roll dice
-  var myRoll = Math.floor(Math.random() * 6) + 1
-  // reassign drone
-  // if (myRoll === 6) {
-  //   resetDrone(SYMTACTICS.players)
-  //   this.drone = true
-  //   announceDroneReassignment(SYMTACTICS.players)
-  // }
-
-  return myRoll
+  return Math.floor(Math.random() * 6) + 1
 }
 
 function shuffle(array: Newspaper[] | Resource[] | Item[]) {
