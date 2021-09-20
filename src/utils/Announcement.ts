@@ -107,7 +107,7 @@ function gameEnd(winner: Player | undefined) {
 
 function playerLocations(players: Player[]) {
   players.forEach((player: Player) => {
-    console.log(`${IN}${player.name} (${player.id}) is in		${player.hex.area.name}	at		${player.hex}`)
+    console.log(`${IN}${player.name} (${player.id}) is in	${player.hex.area.name}	at ${player.hex.id}`)
   })
 }
 
