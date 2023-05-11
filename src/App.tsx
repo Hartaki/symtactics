@@ -28,9 +28,9 @@ function App() {
     winCondition: 'Whoever has the drone at the end of the game wins.',
   }
 
-  
-
   function play(SYMTACTICS: ISymtactics) {
+    console.log('resources', resources)
+
     shuffle(SYMTACTICS.newspapers)
     shuffle(SYMTACTICS.resources)
     announce.gameStart(SYMTACTICS)

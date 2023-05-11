@@ -13,10 +13,12 @@ export class Market {
   }
 }
 
-let bullMarket = new Market('Bull Market', [resourceMap.bitcoin])
-let normal = new Market('Normal', [])
-let pandemic = new Market('Pandemic', [resourceMap.antibodies])
-let bioTech = new Market('Bio Tech', [resourceMap.bamboo, resourceMap.insectSpecies])
-let techBubble = new Market('Tech Bubble', [resourceMap.bitcoin, resourceMap.information, resourceMap.uploads])
+const { insectSpecies, bitcoin, antibodies, bamboo, oysterDust, information, uploads, trashPiles } = resourceMap
 
-export let marketMap: IMarket = { bullMarket, normal, pandemic, bioTech, techBubble }
+let normal = new Market('Normal', [])
+let btcDominance = new Market('BTC Dominance', [bitcoin, uploads])
+let bahamas = new Market('Bahamas', [bitcoin, oysterDust, information])
+let pandemic = new Market('Pandemic', [antibodies])
+let bioTech = new Market('Bio Tech', [insectSpecies, bamboo, oysterDust])
+
+export let marketMap: IMarket = { normal, btcDominance, bahamas, pandemic, bioTech }
