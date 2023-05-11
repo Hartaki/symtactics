@@ -31,6 +31,7 @@ export let resourceMap: IResource = {
   uploads,
   trashPiles,
 }
+
 export let resources: Resource[] = [
   insectSpecies,
   bitcoin,
