@@ -11,6 +11,8 @@ import { ISymtactics } from './js/models'
 import { shuffle } from './utils/helper'
 import { declareWinner, setAffectedArea, handlePlayersAffectedByEvent, handleRoll } from './engine/Engine'
 
+const SIMULATION = true
+
 function App() {
   // init game
   let SYMTACTICS: ISymtactics = {
@@ -26,15 +28,15 @@ function App() {
     winCondition: 'Whoever has the drone at the end of the game wins.',
   }
 
-  let simulation = true
+  
 
-  function playGame(SYMTACTICS: ISymtactics) {
+  function play(SYMTACTICS: ISymtactics) {
     shuffle(SYMTACTICS.newspapers)
     shuffle(SYMTACTICS.resources)
     announce.gameStart(SYMTACTICS)
 
     // SIMULATE
-    if (simulation) {
+    if (SIMULATION) {
       for (let i = 1; i < SYMTACTICS.rounds + 1; i++) {
         announce.state(SYMTACTICS)
         announce.round(i)
@@ -71,7 +73,7 @@ function App() {
     SYMTACTICS.todaysPaper = newspapers.pop()
   }
 
-  playGame(SYMTACTICS)
+  play(SYMTACTICS)
 
   return (
     <div className="App">
