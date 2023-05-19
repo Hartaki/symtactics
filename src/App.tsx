@@ -29,8 +29,6 @@ function App() {
   }
 
   function play(SYMTACTICS: ISymtactics) {
-    console.log('resources', resources)
-
     shuffle(SYMTACTICS.newspapers)
     shuffle(SYMTACTICS.resources)
     announce.gameStart(SYMTACTICS)
