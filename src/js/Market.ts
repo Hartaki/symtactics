@@ -1,6 +1,6 @@
 import { resourceMap, Resource } from './Resource'
 
-export interface IMarket {
+export interface Markets {
   [key: string]: Market
 }
 
@@ -13,12 +13,12 @@ export class Market {
   }
 }
 
-const { insectSpecies, bitcoin, antibodies, bamboo, oysterDust, information, uploads, trashPiles } = resourceMap
+const { insectSpecies, bitcoin, antibodies, bamboo, oysterDust, information, uploads /*trashPiles*/ } = resourceMap
 
-let normal = new Market('Normal', [])
-let btcDominance = new Market('BTC Dominance', [bitcoin, uploads])
-let bahamas = new Market('Bahamas', [bitcoin, oysterDust, information])
-let pandemic = new Market('Pandemic', [antibodies])
-let bioTech = new Market('Bio Tech', [insectSpecies, bamboo, oysterDust])
-
-export let marketMap: IMarket = { normal, btcDominance, bahamas, pandemic, bioTech }
+export let markets: Markets = {
+  normal: new Market('Normal', []),
+  btcDominance: new Market('BTC Dominance', [bitcoin, uploads]),
+  bahamas: new Market('Bahamas', [bitcoin, oysterDust, information]),
+  pandemic: new Market('Pandemic', [antibodies]),
+  bioTech: new Market('Bio Tech', [insectSpecies, bamboo, oysterDust]),
+}

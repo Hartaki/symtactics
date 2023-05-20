@@ -10,6 +10,21 @@ export class Weather {
   }
 }
 
+export interface Mobility {
+  moves: number // number of times a player can move
+  speedFactor: number // multiplier for dice roll speed
+  enter_exit: boolean // true
+  resources: number // 0
+}
+
+// Update every round
+export let mobility: Mobility = {
+  moves: 1,
+  speedFactor: 1,
+  enter_exit: true,
+  resources: 0,
+}
+
 let weatherGlitch = new Weather('Weather Glitch', 'All players may travel twice in a row.', { moves: 2 })
 let heavyRain = new Weather('Heavy Rain', 'All players must travel at 1/2 of their normal speed.', {
   speedFactor: 0.5,

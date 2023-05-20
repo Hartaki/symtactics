@@ -1,6 +1,7 @@
 export interface IArea {
   [key: string]: Area
 }
+
 export class Area {
   name: string
   speed: number

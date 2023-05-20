@@ -10,11 +10,11 @@ import { announce } from './utils/Announcement'
 import { ISymtactics } from './js/models'
 import { shuffle } from './utils/helper'
 import { declareWinner, setAffectedArea, handlePlayersAffectedByEvent, handleRoll } from './engine/Engine'
+import { mobility } from './js/Weather'
 
-const SIMULATION = true
+const SIMULATION = false
 
 function App() {
-  // init game
   let SYMTACTICS: ISymtactics = {
     areaMap,
     items,
@@ -24,19 +24,23 @@ function App() {
     hexes,
     newspapers,
     todaysPaper: undefined,
-    rounds: 10,
+    mobility,
+    rounds: [0, 0, 0, 1, 0, 0, 0, 0, 0],
     winCondition: 'Whoever has the drone at the end of the game wins.',
   }
 
-  function play(SYMTACTICS: ISymtactics) {
-    shuffle(SYMTACTICS.newspapers)
-    shuffle(SYMTACTICS.resources)
-    announce.gameStart(SYMTACTICS)
+  console.table(SYMTACTICS.newspapers)
+
+  shuffle(SYMTACTICS.newspapers)
+  shuffle(SYMTACTICS.resources)
+
+  function init(SYMTACTICS: ISymtactics) {
+    // announce.gameStart(SYMTACTICS)
 
     // SIMULATE
     if (SIMULATION) {
-      for (let i = 1; i < SYMTACTICS.rounds + 1; i++) {
-        announce.state(SYMTACTICS)
+      for (let i = 1; i < SYMTACTICS.rounds.length + 1; i++) {
+        // announce.state(SYMTACTICS)
         announce.round(i)
         playRound()
       }
@@ -71,13 +75,9 @@ function App() {
     SYMTACTICS.todaysPaper = newspapers.pop()
   }
 
-  play(SYMTACTICS)
+  init(SYMTACTICS)
 
-  return (
-    <div className="App">
-      <header className="App-header"></header>
-    </div>
-  )
+  return <div className="App"></div>
 }
 
 export default App

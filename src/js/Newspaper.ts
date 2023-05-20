@@ -1,5 +1,5 @@
 import { weatherMap, Weather } from './Weather'
-import { marketMap, Market } from './Market'
+import { markets, Market } from './Market'
 import { eventMap, Event } from './Event'
 
 export class Newspaper {
@@ -17,7 +17,7 @@ export class Newspaper {
 }
 
 const { weatherGlitch, heavyRain, clear, heatWave, pollutedWind } = weatherMap
-const { normal, btcDominance, bahamas, pandemic, bioTech } = marketMap
+const { normal, btcDominance, bahamas, pandemic, bioTech } = markets
 const {
   event01,
   event02,
